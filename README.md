@@ -2,7 +2,7 @@
 Text to speech tiếng việt, sử dụng zalo api
 
 
-Chương trình đang trong giai đoạn phát triển.
+Chương trình đang trong giai đoạn phát triển. Do mình hết qouta test.
 
 
 

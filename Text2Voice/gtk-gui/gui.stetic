@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+  </configuration>
+  <import>
+    <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="../bin/Debug/Text2Voice.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="737 615">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">Zalo Ai Text to Speech</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.VBox" id="vboxMain">
+        <property name="MemberName" />
+        <property name="Spacing">6</property>
+        <child>
+          <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
+            <property name="MemberName" />
+            <property name="ShadowType">In</property>
+            <child>
+              <widget class="Gtk.TextView" id="textviewText">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="ShowScrollbars">True</property>
+                <property name="Text" translatable="yes">Từ thời thái cổ, nhân loại đối với thế giới quanh mình, thảy những sự kỳ dị.</property>
+                <property name="WrapMode">Word</property>
+                <property name="LeftMargin">5</property>
+                <property name="RightMargin">5</property>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">0</property>
+            <property name="AutoSize">True</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.HPaned" id="hpaned3">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Position">10</property>
+            <child>
+              <placeholder />
+            </child>
+            <child>
+              <widget class="Gtk.HBox" id="hboxBottom">
+                <property name="MemberName" />
+                <property name="Spacing">6</property>
+                <child>
+                  <widget class="Gtk.VBox" id="vboxBottomLeft">
+                    <property name="MemberName" />
+                    <property name="Spacing">6</property>
+                    <child>
+                      <widget class="Gtk.TextView" id="textviewKey">
+                        <property name="MemberName" />
+                        <property name="WidthRequest">512</property>
+                        <property name="HeightRequest">14</property>
+                        <property name="CanFocus">True</property>
+                        <property name="Text" translatable="yes" />
+                        <property name="LeftMargin">5</property>
+                      </widget>
+                      <packing>
+                        <property name="Position">0</property>
+                        <property name="AutoSize">False</property>
+                        <property name="Expand">False</property>
+                        <property name="Padding">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow2">
+                        <property name="MemberName" />
+                        <property name="ShadowType">In</property>
+                        <child>
+                          <widget class="Gtk.TextView" id="textviewLog">
+                            <property name="MemberName" />
+                            <property name="ShowScrollbars">True</property>
+                            <property name="Editable">False</property>
+                            <property name="Text" translatable="yes" />
+                            <property name="WrapMode">Word</property>
+                          </widget>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="Position">1</property>
+                        <property name="AutoSize">True</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <placeholder />
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="Position">0</property>
+                    <property name="AutoSize">False</property>
+                    <property name="Expand">False</property>
+                    <property name="Fill">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.VBox" id="vboxBottomRight">
+                    <property name="MemberName" />
+                    <property name="Spacing">6</property>
+                    <child>
+                      <widget class="Gtk.ComboBox" id="cboVoice">
+                        <property name="MemberName" />
+                        <property name="IsTextCombo">True</property>
+                        <property name="Items" translatable="yes">Nữ miền nam
+Nữ miền bắc
+Nam miền nam
+Nam miền bắc</property>
+                      </widget>
+                      <packing>
+                        <property name="Position">0</property>
+                        <property name="AutoSize">True</property>
+                        <property name="Expand">False</property>
+                        <property name="Fill">False</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="Gtk.HScale" id="hscaleSpeed">
+                        <property name="MemberName" />
+                        <property name="CanFocus">True</property>
+                        <property name="Lower">8</property>
+                        <property name="Upper">13</property>
+                        <property name="PageIncrement">1</property>
+                        <property name="PageSize">1</property>
+                        <property name="StepIncrement">1</property>
+                        <property name="Value">10</property>
+                        <property name="DrawValue">True</property>
+                        <property name="Digits">0</property>
+                        <property name="ValuePos">Top</property>
+                      </widget>
+                      <packing>
+                        <property name="Position">1</property>
+                        <property name="AutoSize">True</property>
+                        <property name="Expand">False</property>
+                        <property name="Fill">False</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="Gtk.Button" id="buttonListent">
+                        <property name="MemberName" />
+                        <property name="CanFocus">True</property>
+                        <property name="Type">TextOnly</property>
+                        <property name="Label" translatable="yes">Nghe</property>
+                        <property name="UseUnderline">True</property>
+                        <signal name="Clicked" handler="OnButtonListentClicked" />
+                      </widget>
+                      <packing>
+                        <property name="Position">2</property>
+                        <property name="AutoSize">True</property>
+                        <property name="Expand">False</property>
+                        <property name="Fill">False</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="Position">1</property>
+                    <property name="AutoSize">True</property>
+                    <property name="Expand">False</property>
+                    <property name="Fill">False</property>
+                  </packing>
+                </child>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="AutoSize">True</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>

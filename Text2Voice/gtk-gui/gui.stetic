@@ -59,7 +59,7 @@
                         <property name="WidthRequest">512</property>
                         <property name="HeightRequest">14</property>
                         <property name="CanFocus">True</property>
-                        <property name="Text" translatable="yes" />
+                        <property name="Text" translatable="yes">MpYbVey2LV38x0EuSIHmfMjPw4sNPqRw</property>
                         <property name="LeftMargin">5</property>
                       </widget>
                       <packing>

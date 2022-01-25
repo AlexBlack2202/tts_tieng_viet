@@ -47,8 +47,7 @@ public partial class MainWindow
 		// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
 		this.textviewText = new global::Gtk.TextView();
 		this.textviewText.Buffer.Text = global::Mono.Unix.Catalog.GetString("Từ thời thái cổ, nhân loại đối với thế giới quanh mình, thảy những sư" +
-				"̣ kỳ dị, chớp loè sấm động, gió dữ mưa to lakjsdhflasdf slkasjdfl aflkas" +
-				"djflasdkfjalsdfaslkfdj");
+				"̣ kỳ dị.");
 		this.textviewText.CanFocus = true;
 		this.textviewText.Name = "textviewText";
 		this.textviewText.WrapMode = ((global::Gtk.WrapMode)(2));
@@ -73,6 +72,7 @@ public partial class MainWindow
 		this.vboxBottomLeft.Spacing = 6;
 		// Container child vboxBottomLeft.Gtk.Box+BoxChild
 		this.textviewKey = new global::Gtk.TextView();
+		this.textviewKey.Buffer.Text = global::Mono.Unix.Catalog.GetString("MpYbVey2LV38x0EuSIHmfMjPw4sNPqRw");
 		this.textviewKey.WidthRequest = 512;
 		this.textviewKey.HeightRequest = 14;
 		this.textviewKey.CanFocus = true;
@@ -107,6 +107,10 @@ public partial class MainWindow
 		this.vboxBottomRight.Spacing = 6;
 		// Container child vboxBottomRight.Gtk.Box+BoxChild
 		this.cboVoice = global::Gtk.ComboBox.NewText();
+		this.cboVoice.AppendText(global::Mono.Unix.Catalog.GetString("Nữ miền nam"));
+		this.cboVoice.AppendText(global::Mono.Unix.Catalog.GetString("Nữ miền bắc"));
+		this.cboVoice.AppendText(global::Mono.Unix.Catalog.GetString("Nam miền nam"));
+		this.cboVoice.AppendText(global::Mono.Unix.Catalog.GetString("Nam miền bắc"));
 		this.cboVoice.Name = "cboVoice";
 		this.vboxBottomRight.Add(this.cboVoice);
 		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vboxBottomRight[this.cboVoice]));

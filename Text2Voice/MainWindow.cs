@@ -39,7 +39,19 @@ public partial class MainWindow : Gtk.Window
             objBuffer.GetBounds(out textIterStart, out textIterEnd);
 
             string text = objBuffer.GetText(textIterStart, textIterEnd, false);
-          
+
+
+            this.textviewKey.Buffer.GetBounds(out textIterStart, out textIterEnd);
+
+
+            string key = this.textviewKey.Buffer.GetText(textIterStart, textIterEnd, false);
+
+            if (string.IsNullOrEmpty(key))
+            {
+                AddLog("Invalid zalo key", "ERROR");
+                return;
+
+            }
             //tree_iter = combo.get_active_iter()
             //if tree_iter is not None:
             //    model = combo.get_model()
@@ -64,7 +76,7 @@ public partial class MainWindow : Gtk.Window
 
             ZaloResultBO zaloResultBO = null;
 
-            using (var client = new RestClient("https://api.zalo.ai/v1/tts/synthesize"))
+            var client = new RestClient("https://api.zalo.ai/v1/tts/synthesize");
             {
                 var request = new RestRequest();
                 request.AddHeader("apikey", "MpYbVey2LV38x0EuSIHmfMjPw4sNPqRw");
@@ -76,6 +88,8 @@ public partial class MainWindow : Gtk.Window
 
                 zaloResultBO = Newtonsoft.Json.JsonConvert.DeserializeObject<ZaloResultBO>(response.Content);
                 AddLog(response.Content);
+
+                client.Dispose();
             }
 
                 
@@ -96,6 +110,10 @@ public partial class MainWindow : Gtk.Window
                 //        Thread.Sleep(1000);
                 //    }
                 //}1000
+            }
+            else
+            {
+                AddLog(zaloResultBO.error_message, "ERROR")
             }
 
 
